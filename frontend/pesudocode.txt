@@ -1,0 +1,9 @@
+1. initialize the const class variables from the HTML 
+
+2. creating the functions
+    - a function to addRecipes 
+    - a function to editRecipes 
+    - a function to deleteRecipes 
+    - a function to displayRecipes 
+
+
