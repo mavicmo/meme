@@ -46,20 +46,21 @@
           </form>
           <button
             type="button"
-            class="btn btn-dark"
+            class="btn btn-dark element"
             data-bs-toggle="modal"
             data-bs-target="#addRecipes"
+            id="modal"
           >
             Add New Recipes
           </button>
         </div>
       </nav>
       <!-- static field for card -->
-      <div class="recipes">
-        <!-- <div
+      <div class="card-deck recipes">
+        <div
           class="card recipe"
           data-bs-toggle="modal"
-          data-bs-target="#exampleModal1"
+          data-bs-target="#cardModal"
         >
           <img
             src="https://www.dinneratthezoo.com/wp-content/uploads/2020/03/honey-chicken-5.jpg"
@@ -74,12 +75,13 @@
               >Go To Recipe</a
             >
           </div>
-        </div> -->
+        </div>
       </div>
+
       <!-- static field for card -->
 
       <!-- test code -->
-      <!-- Display the Modal for adding a new recipe -->
+      <!-- Display the Modal for ADDING a new recipe -->
       <div
         class="modal fade"
         id="addRecipes"
@@ -103,22 +105,24 @@
             <div class="modal-body">
               <div class="row">
                 <div class="col-4">
-                  <div class="input-field">
-                    <label for="name">Name </label>
-                    <input id="name" type="text" class="validate" />
-                  </div>
-                  <div class="input-field">
-                    <label for="tag">Tag </label>
-                    <input id="tag" type="text" class="validate tag" />
-                  </div>
-                  <div class="input-field">
-                    <label for="link">Link </label>
-                    <input id="link" type="text" class="validate" />
-                  </div>
-                  <div class="input-field">
-                    <label for="image">Image Link </label>
-                    <input id="img" type="text" class="validate" />
-                  </div>
+                  <form id="newForm">
+                    <div class="input-field">
+                      <label for="name">Name </label>
+                      <input id="name" type="text" class="validate" />
+                    </div>
+                    <div class="input-field">
+                      <label for="tag">Tag </label>
+                      <input id="tag" type="text" class="validate tag" />
+                    </div>
+                    <div class="input-field">
+                      <label for="link">Link </label>
+                      <input id="link" type="text" class="validate" />
+                    </div>
+                    <div class="input-field">
+                      <label for="image">Image Link </label>
+                      <input id="img" type="text" class="validate" />
+                    </div>
+                  </form>
                 </div>
               </div>
 
@@ -132,7 +136,12 @@
               >
                 Close
               </button>
-              <button type="submit" class="btn btn-primary addRecipe">
+              <button
+                type="submit"
+                class="btn btn-primary addRecipe close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
                 Add Recipe
               </button>
               <!-- Display the Modal for adding a new recipe -->
@@ -143,7 +152,7 @@
       <!-- display the card in a Modal -->
       <div
         class="modal fade"
-        id="exampleModal1"
+        id="cardModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
@@ -151,32 +160,54 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Recipes Name</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
+              <!-- fields to edit -->
+
               <div class="row">
-                <div class="col-1">
-                  <img
-                    src="https://www.dinneratthezoo.com/wp-content/uploads/2020/03/honey-chicken-5.jpg"
-                    class="cardImg"
-                    alt="..."
-                  />
+                <h5 class="modal-title" id="cardRecipeName">Recipes Name</h5>
+                <div class="col-5">
+                  <form id="editForm">
+                    <div class="input-field">
+                      <label for="name">Name </label>
+                      <input id="nameEdit" type="text" class="validate" />
+                    </div>
+                    <div class="input-field">
+                      <label for="tag">Tag </label>
+                      <input id="tagEdit" type="text" class="validate tag" />
+                    </div>
+                    <div class="input-field">
+                      <label for="link">Link </label>
+                      <input id="linkEdit" type="text" class="validate" />
+                    </div>
+                    <div class="input-field">
+                      <label for="image">Image Link </label>
+                      <input id="imgEdit" type="text" class="validate" />
+                    </div>
+                  </form>
                 </div>
               </div>
 
               <!-- <img src="" class="img-fluid" alt="..." /> -->
+
+              <!-- fields to edit -->
             </div>
+
+            <!-- <img src="" class="img-fluid" alt="..." /> -->
+
             <div class="modal-footer">
-              <button type="button" class="btn btn-info editRecipe">
-                Edit
+              <button
+                type="button"
+                class="btn btn-info editSubmit"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                Submit Changes
               </button>
-              <button type="button" class="btn btn-danger deleteRecipe">
+              <button
+                type="button"
+                class="btn btn-danger deleteRecipe"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
                 Delete
               </button>
               <button
