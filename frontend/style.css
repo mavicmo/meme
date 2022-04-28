@@ -4,35 +4,32 @@ body {
   font-family: "Barlow", sans-serif;
 }
 
-/* button {
-  margin-top: 15px !important;
-  margin-right: 15px !important;
-} */
-
-.recipes {
-  margin-top: 15px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+.h5 {
+  height: 200px;
 }
 
 .recipe {
-  background-color: lightgray;
-  width: 100%;
-  height: 300px;
-  cursor: pointer;
+  margin-top: 15px;
 }
 
 .card {
-  height: 200px;
+  height: 400px;
+}
+
+img {
+  height: 300px;
   width: 200px;
 }
 
-.cardImg {
-  height: auto;
-  width: 200px;
+/* Image Zoom In and Zoom Out Effect */
+.inner {
+  overflow: hidden;
 }
 
-/* a {
-  margin-left: 15px;
-} */
+.inner img {
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform: scale(1.5);
+}

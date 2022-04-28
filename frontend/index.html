@@ -21,10 +21,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"
-    /> -->
   </head>
   <body>
     <!-- main container -->
@@ -35,14 +31,14 @@
           <a class="navbar-brand">Recipes</a>
           <form class="d-flex">
             <input
-              class="form-control me-2 tags"
+              class="form-control me-2  searchBtn"
               type="search"
               placeholder="Search"
               aria-label="Search"
+              
             />
-            <button class="btn btn-outline-success tagSearchBtn" type="submit">
-              Search
-            </button>
+          
+            
           </form>
           <button
             type="button"
@@ -56,31 +52,11 @@
         </div>
       </nav>
       <!-- static field for card -->
-      <div class="card-deck recipes">
-        <div
-          class="card recipe"
-          data-bs-toggle="modal"
-          data-bs-target="#cardModal"
-        >
-          <img
-            src="https://www.dinneratthezoo.com/wp-content/uploads/2020/03/honey-chicken-5.jpg"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Recipe Name</h5>
-            <a
-              href="https://www.dinneratthezoo.com/honey-chicken/"
-              class="btn btn-dark"
-              >Go To Recipe</a
-            >
-          </div>
+      <div class="card-deck recipes row row-cols-1 row-cols-md-3 g-4">
         </div>
       </div>
 
-      <!-- static field for card -->
-
-      <!-- test code -->
+         
       <!-- Display the Modal for ADDING a new recipe -->
       <div
         class="modal fade"
@@ -111,10 +87,6 @@
                       <input id="name" type="text" class="validate" />
                     </div>
                     <div class="input-field">
-                      <label for="tag">Tag </label>
-                      <input id="tag" type="text" class="validate tag" />
-                    </div>
-                    <div class="input-field">
                       <label for="link">Link </label>
                       <input id="link" type="text" class="validate" />
                     </div>
@@ -126,7 +98,7 @@
                 </div>
               </div>
 
-              <!-- <img src="" class="img-fluid" alt="..." /> -->
+             
             </div>
             <div class="modal-footer">
               <button
@@ -170,10 +142,7 @@
                       <label for="name">Name </label>
                       <input id="nameEdit" type="text" class="validate" />
                     </div>
-                    <div class="input-field">
-                      <label for="tag">Tag </label>
-                      <input id="tagEdit" type="text" class="validate tag" />
-                    </div>
+                   
                     <div class="input-field">
                       <label for="link">Link </label>
                       <input id="linkEdit" type="text" class="validate" />
@@ -186,12 +155,12 @@
                 </div>
               </div>
 
-              <!-- <img src="" class="img-fluid" alt="..." /> -->
+            
 
               <!-- fields to edit -->
             </div>
 
-            <!-- <img src="" class="img-fluid" alt="..." /> -->
+            
 
             <div class="modal-footer">
               <button
@@ -217,13 +186,13 @@
               >
                 Close
               </button>
-              <!-- Display the Modal for adding a new recipe -->
+            
             </div>
           </div>
         </div>
       </div>
-      <!-- display the card in a Modal -->
-      <!-- test code -->
+   
+     
     </div>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"

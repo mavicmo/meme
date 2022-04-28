@@ -5,7 +5,6 @@ const recipesSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tag: [String],
   img: {
     type: String,
     required: true,

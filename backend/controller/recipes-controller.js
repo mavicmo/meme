@@ -3,16 +3,12 @@ const router = express.Router();
 
 const Recipes = require("../model/recipes-model");
 
-function display(req, res) {
+router.get("/", (req, res) => {
   Recipes.find({})
     .then((recipes) => {
       res.json(recipes);
     })
     .catch((err) => res.json(err));
-}
-
-router.get("/", (req, res) => {
-  display(req, res);
 });
 
 router.post("/", (req, res) => {
